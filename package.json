@@ -1,0 +1,34 @@
+{
+    "name": "whatsappcloudapi_wrapper",
+    "version": "1.0.13",
+    "description": "Tired of doing things wrong? This package provides you with an easy way to get started and start building on the Whatsapp Cloud API. This is an unofficial wrapper for the Whatsapp Cloud API.",
+    "main": "index.js",
+    "author": "Daggie Blanqx",
+    "license": "MIT",
+    "dependencies": {
+        "signale": "^1.4.0",
+        "unirest": "^0.6.0"
+    },
+    "keywords": [
+        "whatsapp",
+        "chatbot",
+        "bot-framework",
+        "cloud-api",
+        "whatsapp-cloud-api",
+        "whatsapp-api",
+        "business-api",
+        "cloud",
+        "api",
+        "whatsapp-cloud",
+        "whatsapp-bot",
+        "bot",
+        "whatsapp-business",
+        "whatsapp-business-api",
+        "meta",
+        "graph api",
+        "unofficial"
+    ],
+    "engines": {
+        "node": ">=10"
+    }
+}
