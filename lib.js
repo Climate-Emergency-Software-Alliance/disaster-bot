@@ -19,43 +19,16 @@ const unsubscribeReplies = {
 };
 
 function getInitialMessageText(language, cardId, disasterType) {
-  return (
-    replies[language] +
-    "\n" +
-    process.env.FRONTEND_CARD_PATH +
-    "/" +
-    cardId +
-    "/" +
-    disasterType
-  );
+  return `${replies[language]}\n${process.env.FRONTEND_CARD_PATH}/${cardId}/${disasterType}`;
 }
 
 function getLocationBasedText(recipientPhone, language, cardId, disasterType) {
-  return (
-    locationBasedReplies[language] +
-    "\n" +
-    process.env.FRONTEND_CARD_PATH +
-    "/" +
-    cardId +
-    "/notifications/" +
-    disasterType +
-    "?waId=" +
-    recipientPhone
-  );
+  return `${locationBasedReplies[language]}\n${process.env.FRONTEND_CARD_PATH}/${cardId}/notifications/${disasterType}?waId=${recipientPhone}`;
 }
 
 function getNeedMessageText(language, cardId, disasterType, phonenumber) {
-  return (
-    replies[language] +
-    "\n" +
-    "https://cards-dev.aafatinfo.pk" +
-    "/" +
-    cardId +
-    "/" +
-    disasterType +
-    "?waId=" +
-    phonenumber
-  );
+  const url = `https://cards-dev.aafatinfo.pk`;
+  return `${replies[language]}\n${url}/${cardId}/${disasterType}?waId=${phonenumber}`;
 }
 
 function sendLocationBasedCard(
