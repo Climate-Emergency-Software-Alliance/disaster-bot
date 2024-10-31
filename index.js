@@ -221,7 +221,7 @@ module.exports.handler = async (event, context, callback) => {
             })
             .catch(async (err) => {
               await WhatsApp.sendText({
-                phone,
+                recipientPhone: phone,
                 message: "Invalid code , Please enter the correct code",
               });
               context.succeed({
@@ -263,7 +263,7 @@ module.exports.handler = async (event, context, callback) => {
         ) {
           await WhatsApp.sendSimpleButtons({
             message: initiate[DEFAULT_LANGUAGE],
-            phone,
+            recipientPhone: phone,
             listOfButtons: [
               {
                 title: start["ur"],
