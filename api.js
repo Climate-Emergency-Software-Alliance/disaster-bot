@@ -25,7 +25,7 @@ const options = {
   },
 };
 
-const Devoptions = {
+const devOptions = {
   host: "https://dev-api.aafatinfo.pk",
   path: "/cards",
   method: "POST",
@@ -160,8 +160,8 @@ function getDevCardLink(username, network, language) {
     language: language,
   };
   return new Promise((resolve, reject) => {
-    unirest(Devoptions.method, `${Devoptions.host}${Devoptions.path}`)
-      .headers(Devoptions.headers)
+    unirest(devOptions.method, `${devOptions.host}${devOptions.path}`)
+      .headers(devOptions.headers)
       .send(JSON.stringify(card_request))
       .end(function (res) {
         if (res.error) {

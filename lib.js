@@ -3,7 +3,7 @@
 const { deleteUser, getCardLink, getDevCardLink } = require("./api");
 
 const locationBasedReplies = {
-  en: "Hi! I’m Disaster Bot! I can let you know if there are active disaster reports in your area. Click here to sign up for notifications.",
+  en: "Hi! I am Aafat Bot! Click report to inform others about rain conditions near you. I will reply here once your report is submitted.",
   ur: "ہائے! میں ڈیزاسٹر بوٹ ہوں! میں آپ کو بتا سکتا ہوں کہ آیا آپ کے علاقے میں تباہی کی فعال رپورٹیں ہیں۔ اطلاعات کے لیے سائن اپ کرنے کے لیے یہاں کلک کریں۔",
 };
 
