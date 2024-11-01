@@ -5,7 +5,8 @@
   "author": "Saad Ahmed Siddiqui",
   "license": "MIT",
   "scripts": {
-    "prettier": "prettier --ignore-path .prettierignore --config prettier.config.js --write ."
+    "prettier": "prettier --ignore-path .prettierignore --config prettier.config.js --write .",
+    "bundle": "zip -r lambda.zip *.js node_modules"
   },
   "dependencies": {
     "signale": "^1.4.0",

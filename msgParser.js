@@ -19,11 +19,13 @@ module.exports = ({ requestBody, currentWABA_ID }) => {
     });
   }
 
-  if (!WABA_ID || WABA_ID !== currentWABA_ID) {
-    throw new Error(
-      "WABA_ID is not valid. Hint: the message is not intended for this Whatsapp Business Account."
-    );
-  }
+  // this was causing aafatinfo bot to not work
+  // commenting this out works well
+  // if (!WABA_ID || WABA_ID !== currentWABA_ID) {
+  //   throw new Error(
+  //     "WABA_ID is not valid. Hint: the message is not intended for this Whatsapp Business Account."
+  //   );
+  // }
 
   //first check if the message is a whatsapp message
   if (

@@ -1,20 +1,19 @@
+"use strict";
+
 const { deleteUser, getCardLink, getDevCardLink } = require("./api");
 
 const locationBasedReplies = {
   en: "Hi! I’m Disaster Bot! I can let you know if there are active disaster reports in your area. Click here to sign up for notifications.",
-  id: "Halo! Saya BencanaBot! Saya dapat memberikan informasi jika ada laporan bencana di sekitar anda. Klik link berikut untuk mendapatkan notifikasi.",
   ur: "ہائے! میں ڈیزاسٹر بوٹ ہوں! میں آپ کو بتا سکتا ہوں کہ آیا آپ کے علاقے میں تباہی کی فعال رپورٹیں ہیں۔ اطلاعات کے لیے سائن اپ کرنے کے لیے یہاں کلک کریں۔",
 };
 
 const replies = {
   en: "Hi! Report using this link, thanks.",
-  id: "Hai! Laporkan menggunakan link ini. Terima kasih.",
   ur: "ہائے! اس لنک کو استعمال کرتے ہوئے رپورٹ کریں، شکریہ۔",
 };
 
 const unsubscribeReplies = {
   en: "Hey! You’ve successfully unsubscribed from location-based notifications. If you ever want to receive these updates again, just type “lmk” or “mauinfo”, to stay informed about active disaster reports in your area.",
-  id: 'Halo! Kamu telah berhasil berhenti berlangganan notifikasi berbasis lokasi. Jika kamu ingin menerima informasi kejadian bencana terkini, cukup ketik "lmk" atau "mauinfo" untuk mendapat notifikasi tentang laporan bencana aktif disekitarmu.',
   ur: 'ارے! آپ نے مقام پر مبنی اطلاعات سے کامیابی کے ساتھ ان سبسکرائب کر دیا ہے۔ اگر آپ کبھی بھی یہ اپ ڈیٹس دوبارہ حاصل کرنا چاہتے ہیں، تو صرف "mauinfo" یا "lmk" ٹائپ کریں، اپنے علاقے میں فعال ڈیزاسٹر رپورٹس کے بارے میں باخبر رہنے کے لیے۔',
 };
 
