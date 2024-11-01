@@ -266,20 +266,22 @@ async function replyForSimpleButtonMessage(params, context) {
 async function replyForRadioButtonMessage(params, context) {
   const { selectionId, phone, whatsapp, language } = params;
 
+  let lan;
+  console.log("replyForRadioButtonMessage", selectionId, phone, language);
   let disasterType;
   switch (selectionId) {
     case "flood":
       disasterType = "flood";
-      language = "en";
+      lan = "en";
       break;
     case "سیلاب":
       disasterType = "flood";
-      language = "ur";
+      lan = "ur";
       break;
   }
 
   try {
-    await sendDisasterCard(whatsapp, phone, disasterType, language);
+    await sendDisasterCard(whatsapp, phone, disasterType, lan);
 
     context.succeed(SUCCESS);
   } catch (error) {
